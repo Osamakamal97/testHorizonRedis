@@ -16,6 +16,7 @@ class SendHelloToNewStudentListener implements ShouldQueue
      */
     public function handle($event)
     {
+        sleep(15);
         Mail::to('user@example.com')->send(new HelloMail($event->student));
     }
 }
